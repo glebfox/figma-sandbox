@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://sandboxScreen.caption">
+    <layout>
+        <vbox spacing="true">
+            <textField caption="Tooltip only" description="Tooltip Text"/>
+            <textField caption="Required Message" required="true" requiredMessage="Required Message"/>
+            <textField caption="Tooltip and Required Message" required="true" description="Tooltip Text"
+                       requiredMessage="Required Message"/>
+        </vbox>
+    </layout>
+</window>
