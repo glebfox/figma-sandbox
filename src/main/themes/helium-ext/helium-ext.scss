@@ -6,4 +6,12 @@
   .jmix-drawer .jmix-drawer-content.jmix-sidemenu .jmix-sidemenu-item.jmix-sidemenu-item-selected span.v-icon {
     color: var(--sidemenu-item-selected-color);
   }
+
+  .jmix-drawer .jmix-drawer-content.jmix-sidemenu .jmix-sidemenu-item.jmix-sidemenu-item-selected:hover {
+    color: var(--sidemenu-item-selected-color);
+
+    span.v-icon {
+      color: var(--sidemenu-item-selected-color);
+    }
+  }
 }

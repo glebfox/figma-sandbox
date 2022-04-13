@@ -1,12 +1,12 @@
 plugins {
-    id 'io.jmix' version '1.2.0'
+    id 'io.jmix' version '1.0.0'
     id 'java'
 }
 
 apply plugin: 'org.springframework.boot'
 
 jmix {
-    bomVersion = '1.2.1'
+    bomVersion = '1.0.0'
     projectId = 'demo'
 }
 
@@ -32,8 +32,11 @@ dependencies {
     implementation 'io.jmix.localfs:jmix-localfs-starter'
     implementation 'io.jmix.datatools:jmix-datatools-starter'
     implementation 'io.jmix.datatools:jmix-datatools-ui-starter'
+    implementation 'io.jmix.sessions:jmix-sessions-starter'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.apache.commons:commons-dbcp2'
 
     runtimeOnly 'org.hsqldb:hsqldb'
 

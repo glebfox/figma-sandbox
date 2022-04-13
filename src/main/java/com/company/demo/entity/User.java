@@ -1,7 +1,5 @@
 package com.company.demo.entity;
 
-import io.jmix.core.HasTimeZone;
-import io.jmix.core.annotation.Secret;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.entity.annotation.SystemLevel;
 import io.jmix.core.metamodel.annotation.DependsOnProperties;
@@ -20,7 +18,7 @@ import java.util.UUID;
 @Table(name = "DEMO_USER", indexes = {
         @Index(name = "IDX_DEMO_USER_ON_USERNAME", columnList = "USERNAME", unique = true)
 })
-public class User implements JmixUserDetails, HasTimeZone {
+public class User implements JmixUserDetails {
 
     @Id
     @Column(name = "ID")
@@ -34,7 +32,6 @@ public class User implements JmixUserDetails, HasTimeZone {
     @Column(name = "USERNAME", nullable = false)
     protected String username;
 
-    @Secret
     @SystemLevel
     @Column(name = "PASSWORD")
     protected String password;
@@ -160,7 +157,6 @@ public class User implements JmixUserDetails, HasTimeZone {
                 (lastName != null ? lastName : ""), username).trim();
     }
 
-    @Override
     public String getTimeZoneId() {
         return timeZoneId;
     }
